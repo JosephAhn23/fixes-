@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# pytest is baked into the environment image (environment/Dockerfile).
-# Do not use set -e: a failing pytest must still reach the reward write below.
 mkdir -p /logs/verifier
 
 pytest /tests/test_outputs.py -rA --ctrf /logs/verifier/ctrf.json
